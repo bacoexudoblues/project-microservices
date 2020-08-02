@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class InfoProviderDTO {
 
-    private String adress;
+    private String address;
 }

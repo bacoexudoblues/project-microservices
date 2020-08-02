@@ -2,6 +2,7 @@ package br.com.project.store.controller;
 
 
 import br.com.project.store.controller.dto.PurchaseDTO;
+import br.com.project.store.model.Purchase;
 import br.com.project.store.service.ServicePurshace;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +17,10 @@ public class ControllerStore {
 
     private final ServicePurshace servicePurshace;
 
-
     @PostMapping
-    public void makePurchase(@RequestBody PurchaseDTO purchaseDTO) {
+    public Purchase makePurchase(@RequestBody PurchaseDTO purchaseDTO) {
 
-        servicePurshace.generatePurchase(purchaseDTO);
+        return servicePurshace.generatePurchase(purchaseDTO);
 
     }
 }
